@@ -7,6 +7,9 @@
 
 #import "KeyboardViewController.h"
 
+//#import <React/RCTBundleURLProvider.h>
+//#import <React/RCTRootView.h>
+
 @interface KeyboardViewController ()
 @property (nonatomic, strong) UIButton *nextKeyboardButton;
 @end
@@ -35,6 +38,15 @@
     
     [self.nextKeyboardButton.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
     [self.nextKeyboardButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
+  
+//    NSURL *jsCodeLocation;
+//
+//    jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.keyboard" fallbackResource:nil];
+//
+//    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:@"customkeyboard" initialProperties:nil launchOptions:nil];
+//    rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
+//
+//    [self.view addSubview:rootView];
 }
 
 - (void)viewWillLayoutSubviews
