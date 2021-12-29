@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* reactnativecustomkeyboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* reactnativecustomkeyboardTests.m */; };
+		107825D7277D2005005E52CC /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 107825D6277D2005005E52CC /* KeyboardViewController.m */; };
+		107825DB277D2005005E52CC /* customkeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 107825D3277D2005005E52CC /* customkeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		6172F2D35A4C3AA820D92908 /* libPods-reactnativecustomkeyboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-reactnativecustomkeyboard.a */; };
 		7EF68E3733C33B6898317E18 /* libPods-reactnativecustomkeyboard-reactnativecustomkeyboardTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-reactnativecustomkeyboard-reactnativecustomkeyboardTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		85D8F292A6C3B82B22EFFAAE /* libPods-customkeyboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E35CF8A252617DC57DBAB0E /* libPods-customkeyboard.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,12 +27,37 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = reactnativecustomkeyboard;
 		};
+		107825D9277D2005005E52CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 107825D2277D2005005E52CC;
+			remoteInfo = customkeyboard;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		107825DC277D2005005E52CC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				107825DB277D2005005E52CC /* customkeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* reactnativecustomkeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reactnativecustomkeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* reactnativecustomkeyboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = reactnativecustomkeyboardTests.m; sourceTree = "<group>"; };
+		107825D3277D2005005E52CC /* customkeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = customkeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		107825D5277D2005005E52CC /* KeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
+		107825D6277D2005005E52CC /* KeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
+		107825D8277D2005005E52CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* reactnativecustomkeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reactnativecustomkeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = reactnativecustomkeyboard/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = reactnativecustomkeyboard/AppDelegate.m; sourceTree = "<group>"; };
@@ -37,10 +65,13 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = reactnativecustomkeyboard/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = reactnativecustomkeyboard/main.m; sourceTree = "<group>"; };
 		1D0AE47A65C8663E3B452821 /* Pods-reactnativecustomkeyboard-reactnativecustomkeyboardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactnativecustomkeyboard-reactnativecustomkeyboardTests.release.xcconfig"; path = "Target Support Files/Pods-reactnativecustomkeyboard-reactnativecustomkeyboardTests/Pods-reactnativecustomkeyboard-reactnativecustomkeyboardTests.release.xcconfig"; sourceTree = "<group>"; };
+		549D81E2377557DFD62E0E67 /* Pods-customkeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-customkeyboard.release.xcconfig"; path = "Target Support Files/Pods-customkeyboard/Pods-customkeyboard.release.xcconfig"; sourceTree = "<group>"; };
 		6423831EA8574132BED9D8CC /* libPods-reactnativecustomkeyboard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactnativecustomkeyboard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C97AB639B58BBB4B15BBE30 /* Pods-reactnativecustomkeyboard-reactnativecustomkeyboardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactnativecustomkeyboard-reactnativecustomkeyboardTests.debug.xcconfig"; path = "Target Support Files/Pods-reactnativecustomkeyboard-reactnativecustomkeyboardTests/Pods-reactnativecustomkeyboard-reactnativecustomkeyboardTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6E35CF8A252617DC57DBAB0E /* libPods-customkeyboard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-customkeyboard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = reactnativecustomkeyboard/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABFE59519B596E51CEFDCCC0 /* libPods-reactnativecustomkeyboard-reactnativecustomkeyboardTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactnativecustomkeyboard-reactnativecustomkeyboardTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AECF90D8524F7A1C6DBD8C03 /* Pods-customkeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-customkeyboard.debug.xcconfig"; path = "Target Support Files/Pods-customkeyboard/Pods-customkeyboard.debug.xcconfig"; sourceTree = "<group>"; };
 		C0A881CF5CF3F2B244570E2A /* Pods-reactnativecustomkeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactnativecustomkeyboard.debug.xcconfig"; path = "Target Support Files/Pods-reactnativecustomkeyboard/Pods-reactnativecustomkeyboard.debug.xcconfig"; sourceTree = "<group>"; };
 		D00AAFFCFCFDA5787532823F /* Pods-reactnativecustomkeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactnativecustomkeyboard.release.xcconfig"; path = "Target Support Files/Pods-reactnativecustomkeyboard/Pods-reactnativecustomkeyboard.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -52,6 +83,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EF68E3733C33B6898317E18 /* libPods-reactnativecustomkeyboard-reactnativecustomkeyboardTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		107825D0277D2005005E52CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85D8F292A6C3B82B22EFFAAE /* libPods-customkeyboard.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +122,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		107825D4277D2005005E52CC /* customkeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				107825D5277D2005005E52CC /* KeyboardViewController.h */,
+				107825D6277D2005005E52CC /* KeyboardViewController.m */,
+				107825D8277D2005005E52CC /* Info.plist */,
+			);
+			path = customkeyboard;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* reactnativecustomkeyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +151,7 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				6423831EA8574132BED9D8CC /* libPods-reactnativecustomkeyboard.a */,
 				ABFE59519B596E51CEFDCCC0 /* libPods-reactnativecustomkeyboard-reactnativecustomkeyboardTests.a */,
+				6E35CF8A252617DC57DBAB0E /* libPods-customkeyboard.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -119,6 +169,7 @@
 				13B07FAE1A68108700A75B9A /* reactnativecustomkeyboard */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* reactnativecustomkeyboardTests */,
+				107825D4277D2005005E52CC /* customkeyboard */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				E233CBF5F47BEE60B243DCF8 /* Pods */,
@@ -133,6 +184,7 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* reactnativecustomkeyboard.app */,
 				00E356EE1AD99517003FC87E /* reactnativecustomkeyboardTests.xctest */,
+				107825D3277D2005005E52CC /* customkeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,8 +196,9 @@
 				D00AAFFCFCFDA5787532823F /* Pods-reactnativecustomkeyboard.release.xcconfig */,
 				6C97AB639B58BBB4B15BBE30 /* Pods-reactnativecustomkeyboard-reactnativecustomkeyboardTests.debug.xcconfig */,
 				1D0AE47A65C8663E3B452821 /* Pods-reactnativecustomkeyboard-reactnativecustomkeyboardTests.release.xcconfig */,
+				AECF90D8524F7A1C6DBD8C03 /* Pods-customkeyboard.debug.xcconfig */,
+				549D81E2377557DFD62E0E67 /* Pods-customkeyboard.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -173,6 +226,24 @@
 			productReference = 00E356EE1AD99517003FC87E /* reactnativecustomkeyboardTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		107825D2277D2005005E52CC /* customkeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 107825DF277D2005005E52CC /* Build configuration list for PBXNativeTarget "customkeyboard" */;
+			buildPhases = (
+				E1DD4AF36E344BF78AD12811 /* [CP] Check Pods Manifest.lock */,
+				107825CF277D2005005E52CC /* Sources */,
+				107825D0277D2005005E52CC /* Frameworks */,
+				107825D1277D2005005E52CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = customkeyboard;
+			productName = customkeyboard;
+			productReference = 107825D3277D2005005E52CC /* customkeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		13B07F861A680F5B00A75B9A /* reactnativecustomkeyboard */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "reactnativecustomkeyboard" */;
@@ -185,10 +256,12 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				C8AC78B0264D0F9F6F6D630E /* [CP] Embed Pods Frameworks */,
 				ADC9DDC32298B72B3CF5DC8E /* [CP] Copy Pods Resources */,
+				107825DC277D2005005E52CC /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				107825DA277D2005005E52CC /* PBXTargetDependency */,
 			);
 			name = reactnativecustomkeyboard;
 			productName = reactnativecustomkeyboard;
@@ -206,6 +279,9 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					107825D2277D2005005E52CC = {
+						CreatedOnToolsVersion = 13.0;
 					};
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1120;
@@ -227,12 +303,20 @@
 			targets = (
 				13B07F861A680F5B00A75B9A /* reactnativecustomkeyboard */,
 				00E356ED1AD99517003FC87E /* reactnativecustomkeyboardTests */,
+				107825D2277D2005005E52CC /* customkeyboard */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		107825D1277D2005005E52CC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -377,6 +461,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reactnativecustomkeyboard/Pods-reactnativecustomkeyboard-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E1DD4AF36E344BF78AD12811 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-customkeyboard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -407,6 +513,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		107825CF277D2005005E52CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				107825D7277D2005005E52CC /* KeyboardViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		13B07F871A680F5B00A75B9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,6 +537,11 @@
 			isa = PBXTargetDependency;
 			target = 13B07F861A680F5B00A75B9A /* reactnativecustomkeyboard */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+		107825DA277D2005005E52CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 107825D2277D2005005E52CC /* customkeyboard */;
+			targetProxy = 107825D9277D2005005E52CC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -478,6 +597,86 @@
 			};
 			name = Release;
 		};
+		107825DD277D2005005E52CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AECF90D8524F7A1C6DBD8C03 /* Pods-customkeyboard.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6FBHBZ8JNW;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = customkeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = customkeyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.reactnativecustomkeyboard.customkeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		107825DE277D2005005E52CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 549D81E2377557DFD62E0E67 /* Pods-customkeyboard.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 6FBHBZ8JNW;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = customkeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = customkeyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.reactnativecustomkeyboard.customkeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C0A881CF5CF3F2B244570E2A /* Pods-reactnativecustomkeyboard.debug.xcconfig */;
@@ -485,6 +684,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6FBHBZ8JNW;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = reactnativecustomkeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -511,6 +711,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6FBHBZ8JNW;
 				INFOPLIST_FILE = reactnativecustomkeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -661,6 +862,15 @@
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
 				00E356F71AD99517003FC87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		107825DF277D2005005E52CC /* Build configuration list for PBXNativeTarget "customkeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				107825DD277D2005005E52CC /* Debug */,
+				107825DE277D2005005E52CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
