@@ -1,24 +1,27 @@
 import React from 'react';
-import {AppRegistry, View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 function Customkeyboard() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Funcionou :)</Text>
+      <Text style={styles.text}>Funcionou 🥳</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    width: '100%',
+    height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#3772FF',
   },
   text: {
-    fontSize: 16,
+    fontSize: 18,
+    fontWeight: '900',
+    color: '#F7F7F7',
   },
 });
 
-AppRegistry.registerComponent('customkeyboard', () => Customkeyboard);
+export default Customkeyboard;

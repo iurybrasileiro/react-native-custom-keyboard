@@ -5,6 +5,7 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "prestart": "watchman watch-del '/Users/iurybrasileiro/dev/work/DoctorWEB/studies/react-native-custom-keyboard' ; watchman watch-project '/Users/iurybrasileiro/dev/work/DoctorWEB/studies/react-native-custom-keyboard'",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"

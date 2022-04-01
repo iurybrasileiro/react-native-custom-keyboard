@@ -7,52 +7,64 @@
 
 #import "KeyboardViewController.h"
 
-//#import <React/RCTBundleURLProvider.h>
-//#import <React/RCTRootView.h>
+#import <React/RCTBridge.h>
+#import <React/RCTBundleURLProvider.h>
+#import <React/RCTRootView.h>
 
 @interface KeyboardViewController ()
-@property (nonatomic, strong) UIButton *nextKeyboardButton;
+  @property (nonatomic) RCTRootView *rootView;
+  @property (nonatomic) RCTBridge *bridge;
+  @property (nonatomic) UIView *circleView;
 @end
+
+KeyboardViewController * keyboardViewController = nil;
 
 @implementation KeyboardViewController
 
 - (void)updateViewConstraints {
     [super updateViewConstraints];
     
-    // Add custom view sizing constraints here
+    if (self.rootView) {
+      self.rootView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    }
+
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Perform custom UI setup here
-    self.nextKeyboardButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    
-    [self.nextKeyboardButton setTitle:NSLocalizedString(@"Next Keyboard", @"Title for 'Next Keyboard' button") forState:UIControlStateNormal];
-    [self.nextKeyboardButton sizeToFit];
-    self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    [self.nextKeyboardButton addTarget:self action:@selector(handleInputModeListFromView:withEvent:) forControlEvents:UIControlEventAllTouchEvents];
-    
-    [self.view addSubview:self.nextKeyboardButton];
-    
-    [self.nextKeyboardButton.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
-    [self.nextKeyboardButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
   
-//    NSURL *jsCodeLocation;
-//
-//    jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.keyboard" fallbackResource:nil];
-//
-//    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:@"customkeyboard" initialProperties:nil launchOptions:nil];
-//    rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
-//
-//    [self.view addSubview:rootView];
+    CGFloat _expandedHeight = 350;
+      NSLayoutConstraint *_heightConstraint =
+          [NSLayoutConstraint constraintWithItem: self.view
+                                     attribute: NSLayoutAttributeHeight
+                                     relatedBy: NSLayoutRelationEqual
+                                        toItem: nil
+                                     attribute: NSLayoutAttributeNotAnAttribute
+                                    multiplier: 0.0
+                                      constant: _expandedHeight];
+    [self.view addConstraint: _heightConstraint];
+  
+    self.bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:@{@"keyboardExtension": self}];
+    self.rootView = [[RCTRootView alloc] initWithBridge:self.bridge
+                                                     moduleName:@"RNKeyboard"
+                                               initialProperties:nil];
+    self.view = self.rootView;
+    [self updateViewConstraints];
+    keyboardViewController = self;
+}
+
+- (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
+{
+  #if DEBUG
+    return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+  #else
+    return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+  #endif
 }
 
 - (void)viewWillLayoutSubviews
 {
-    self.nextKeyboardButton.hidden = !self.needsInputModeSwitchKey;
-    [super viewWillLayoutSubviews];
+    //
 }
 
 - (void)textWillChange:(id<UITextInput>)textInput {
@@ -61,14 +73,10 @@
 
 - (void)textDidChange:(id<UITextInput>)textInput {
     // The app has just changed the document's contents, the document context has been updated.
-    
-    UIColor *textColor = nil;
-    if (self.textDocumentProxy.keyboardAppearance == UIKeyboardAppearanceDark) {
-        textColor = [UIColor whiteColor];
-    } else {
-        textColor = [UIColor blackColor];
-    }
-    [self.nextKeyboardButton setTitleColor:textColor forState:UIControlStateNormal];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 
 @end
